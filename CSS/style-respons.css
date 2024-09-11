@@ -1,0 +1,367 @@
+/* Estilos Gerais */
+body {
+    background-color: rgb(61, 61, 61);
+    font-family: "Montserrat", "Helvetica Neue", "Arial";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menu */
+#menu {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    margin-bottom: -50px; /* Ajustado para posicionar corretamente a logo */
+}
+
+.ul-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.li-menu {
+    letter-spacing: 1px;
+}
+
+.link-menu {
+    color: white;
+    text-decoration: none;
+}
+
+.link-menu:hover {
+    color: rgb(217, 217, 217);
+    border-bottom: 2px solid rgb(249, 208, 0);
+}
+
+/* Botão PT-EN */
+#check {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    background-color: rgb(217, 217, 217);
+    width: 60px;
+    height: 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.pt-en {
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s ease-in-out;
+    transform: translate(0px);
+}
+
+#check:checked ~ .switch {
+    background-color: black;
+}
+
+#check:checked ~ .switch .pt-en {
+    background-color: rgb(217, 217, 217);
+    transform: translateX(30px);
+}
+
+#botao {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.lang {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Main */
+.main-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.retangulo-1, .retangulo-2 {
+    background-color: rgb(249, 208, 0);
+    height: 15px;
+    width: 100%;
+    max-width: 750px;
+    margin-top: 15px;
+}
+
+.foto {
+    width: 80%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.main-2 {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 750px;
+}
+
+.h1-main {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.paragrafo-main {
+    color: white;
+    font-size: 16px;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.logo-github, .logo-linkedin, .logo-curriculo {
+    width: 50px;
+    height: 50px;
+}
+
+.redes-sociais {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.redes-sociais:hover {
+    border-bottom: 2px solid rgb(249, 208, 0);
+}
+
+/* Projetos */
+.main-3 {
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#projetos {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.div-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.link-card {
+    color: white;
+    text-decoration: none;
+}
+
+.link-card:hover {
+    color: rgb(249, 208, 0);
+}
+
+.describe-card {
+    letter-spacing: 1px;
+}
+
+/* Contato */
+#form-contato {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#h1-contato {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(249, 208, 0);
+}
+
+.paragrafo-contato {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caixa-contato, #caixa-texto {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#botao-contato {
+    color: black;
+    background-color: white;
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#botao-contato:hover {
+    color: black;
+    background-color: rgb(171, 171, 171);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.h1-footer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.paragrafo-footer {
+    font-size: 16px;
+    text-align: center;
+}
+
+.redes-footer {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.link-footer {
+    display: inline-block;
+}
+
+.foto-footer-insta, .foto-footer-linkedin {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* Media Queries */
+
+/* Desktops Médios e Acima */
+@media (min-width: 992px) {
+    #menu {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+
+    .ul-menu {
+        padding: 0;
+        margin: 0;
+        gap: 30px;
+    }
+}
+
+/* Tablets e Menores */
+@media (max-width: 991px) {
+    .ul-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .foto {
+        width: 70%;
+    }
+
+    .main-2 {
+        width: 90%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #form-contato {
+        width: 100%;
+    }
+
+    #h1-contato {
+        font-size: 20px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 575px) {
+    .foto {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #form-contato {
+        width: 90%;
+    }
+
+    #h1-contato {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,835 @@
+body{
+    background-color: rgb(61, 61, 61);
+    font-family: "Montserrat", "Helvetica Neue", "Arial";
+}
+
+#menu{
+    background-color: black!important;
+    height: 210px;
+    display: flex;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    margin-left: -7%;
+    margin-top: -200px;
+}
+
+.ul-menu{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    padding-left: 650px;
+    margin-top: -280px;
+}
+.li-menu{
+    display: flex;
+    letter-spacing: 1px;
+}
+.link-menu{
+    color: white;
+    text-decoration: none;
+}
+.link-menu:hover{
+    color: rgb(217, 217, 217);
+    border-bottom: 2px solid rgb(249, 208, 0);
+}
+
+/* Menu mobile*/
+.menu-mobile{
+    background-color: rgba(0, 0, 0, 0.799);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 210px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: 100vh;
+    align-items: center;
+    visibility: hidden;
+}
+.ul-menu-mobile{
+    list-style-type: none;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.li-menu-mobile{
+    margin-left: -40px;
+}
+.li-menu-mobile:hover{  
+    background-color: rgba(0, 0, 0, 0.603);
+    border-bottom: 2px solid rgb(249, 208, 0);
+    width: calc(100% + 40px);
+}
+
+.link-menu-mobile{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+#botao-menu-mobile{
+    margin-left: 47.5%;
+    margin-top: 7%;
+}
+.lang-menu-mobile{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0;
+    margin-top: -1%;
+}
+
+#btn-menu{
+    width: 80px;
+    height: 80px;
+    border: 4px solid white;
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#btn-menu.active .linha:nth-child(1){
+    transform: translateY(7px) rotate(-45deg);
+    background-color: rgb(249, 208, 0);
+}
+#btn-menu.active .linha:nth-child(2){
+    display: none;
+}
+#btn-menu.active .linha:nth-child(3){
+    transform: translateY(-7px) rotate(225deg);
+    background-color: rgb(249, 208, 0);
+}
+#btn-menu.active{
+    border: solid 4px rgb(171, 171, 171);
+}
+
+.linha{
+    width: 50px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.5s;
+}
+#btn-menu{
+    display: none;
+    visibility: hidden;
+}
+
+
+/*Botão PT-EN*/
+#check{
+    display: none;
+}
+
+.switch{
+    position: relative;
+    background-color: rgb(217, 217, 217);
+    width: 60px;
+    height: 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.pt-en{
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s ease-in-out;
+    transform: translate(0px);
+}
+
+#check:checked ~ .switch{
+    background-color: black;
+}
+#check:checked ~ .switch .pt-en{
+    background-color: rgb(217, 217, 217);
+    transform: translateX(30px);
+}
+#botao{
+    display: flex;
+    padding-bottom: 100px;
+    margin-left: 5%;
+    text-transform: uppercase;
+    
+}
+.lang{
+    display: flex;
+    font-size: 20px;
+    padding-bottom: 95px;
+    margin-left: 10px;
+}
+
+/*main*/
+.main-1{
+    display: flex;
+}
+
+.retangulo-1{
+    background-color: rgb(249, 208, 0);
+    height: 15px;
+    width: 50%;
+    margin-top: 15%;
+}
+
+.foto{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    margin-left: 50%;
+    margin-top: 20%;
+}
+
+.main-2{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10%;
+    margin-left: 5%;
+}
+ 
+.retangulo-2{
+    background-color: rgb(249, 208, 0);
+    height: 15px;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.h1-main{
+    color: white;
+    font-size: 35px;
+    margin-bottom: -0.5%;
+    text-decoration: underline;
+}
+
+.paragrafo-main{
+    color: white; 
+    font-size: 20px;  
+    width: 40%;
+    text-align: justify;
+    letter-spacing: .5px;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.logo-github{
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+.logo-linkedin{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+.logo-curriculo{
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+.redes-sociais{
+    margin-bottom: 50px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.redes-sociais:hover{
+    border-bottom: 2px solid rgb(249, 208, 0);
+}
+/*Main3 - Projetos */
+.main-3{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+    text-align: center;
+}
+
+#projetos{
+    margin-left: 43%;
+    color:black;
+    font-size: 40px;
+    font-weight: bold;
+}
+.div-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+.card{
+    flex: column;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: black;
+    padding: 5%;
+    margin-bottom: 5%;
+    border-radius: 3%;
+}
+
+.link-card{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 30%;
+}
+.link-card:hover{
+    color: rgb(249, 208, 0);
+}
+
+.describe-card{
+    letter-spacing: 1px;
+}
+
+/*Contato*/
+#form-contato{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 25%;
+    border-radius: 20px;
+    /*box-shadow: 5px 10px 2px rgb(117, 117, 117);*/
+}
+#h1-contato{
+    width: 330px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25%;
+    padding-bottom: 5px;
+    letter-spacing: 0.2px;
+    border-bottom: 1px solid rgb(249, 208, 0);
+}
+.paragrafo-contato{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    margin-left: 15%;
+}
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.caixa-contato{
+    width: 60%;
+    height: 22px;
+    margin-left: 15%;
+}
+#caixa-texto{
+    width: 60%;
+    height: 100px;
+    margin-bottom: 4%;
+    margin-left: 15%;
+}
+#botao-contato{
+    color: black;
+    background-color: white;
+    border-radius: 7px;
+    width: 20%;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 15%;
+}
+#botao-contato:hover{
+    color: black;
+    background-color: rgb(171, 171, 171);
+}
+#form-message{
+    margin-left: 15%;
+}
+
+/*Footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    align-items: center;
+    margin-top: 5%;
+}
+.h1-footer{
+    font-size: 30px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    margin-left: 8%;
+    padding-top: 20px;
+    width: 280px;
+}
+.paragrafo-footer{
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.redes-footer{
+    display: flex;
+    gap: 20px;
+}
+.link-footer{
+    display: inline-block;
+}
+.foto-footer-insta{
+    width: 50px;
+    height: 50px;
+    padding-left: 2px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.foto-footer-linkedin{
+    padding-left: 2px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.copy{
+    width: 100%;
+    margin-top: 5px;
+    background-color: rgba(173, 173, 173, 0.507);
+}
+#divisao-footer{
+    width: 80%;
+}
+.paragrafo-copy{
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*Responsividade*/
+/* Media Queries */
+
+@media screen and (max-width: 1400px){
+    .foto{
+        margin-left: 120px;
+    }
+    #botao{
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #botao{
+        margin-left: -5%;
+    }
+    .lista-menu{
+        margin-left: -5%;
+    }
+    #projetos{
+        margin-left: 42%;
+    }
+}
+@media screen and (max-width: 1200px){
+    .div-resp{
+        display: flex;
+    }
+    .logo{
+        margin-left: -50%;
+        margin-bottom: -40%;
+    }
+    .lista-menu, #botao, .lang{
+        display: none;
+    }
+    #btn-menu{
+        display: block;
+        visibility: visible;
+        margin-left: 80%;
+    }
+    #menu-mobile.open{
+        visibility: visible;
+    }
+    .lang-menu-mobile{
+        margin-left: 14px;
+    }
+}
+
+@media screen and (max-width: 1151px){
+    .foto{
+        width: 400px;
+        height: 400px;
+        margin-left: 90px;
+    }
+    #projetos{
+        margin-left: 41%;
+    }
+    .paragrafo-main{
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+    #h1-contato{ 
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 1180px){
+    .logo{
+        margin-left: -60%;
+    }
+    #h1-contato{
+        margin-left: 21.5%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .logo{
+        margin-left: -40%;
+    }
+    .foto{
+        width: 300px;
+        height: 300px;
+    }
+    #projetos{
+        margin-left: 40%;
+    }
+    .paragrafo-main{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    #h1-contato{
+        margin-left: 16%;    
+    }
+    #btn-menu{
+        margin-left: 50%;
+    }
+    .lang-menu-mobile{
+        margin-left: 1px;
+    }
+    #botao-menu-mobile{
+        margin-left: 46.5%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .logo{
+        width: 400px;
+    }
+    .paragrafo-main{
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    #h1-contato{
+        font-size: 28px;
+        width: 305px;    
+        margin-left: 15%;
+    }
+    .lang-menu-mobile{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .foto{
+        width: 250px;
+        height: 250px;
+        margin-left: 70px;
+    }
+    .describe-card{
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    .h2-card{
+        font-size: 20px;
+    }
+    #projetos{
+        font-size: 35px;
+        margin-left: 38.5%;
+    }
+    #h1-contato{
+        margin-left: 11.5%;
+    }
+
+    #botao-contato{
+        font-size: 16px;
+    }
+    .lang-menu-mobile{
+        margin-left: -8px;
+    }
+    #botao-menu-mobile{
+        margin-left: 45%;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .foto{
+        width: 250px;
+        height: 250px;
+    }
+    #h1-contato{
+        margin-left: 10.5%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .logo{
+        width: 350px;
+        margin-top: -35%;
+    }
+    .foto{
+        margin-left: 50px;
+    }
+    .paragrafo-main{
+        width: 50%;
+    }
+    #projetos{
+        font-size: 30px;
+    }
+    .h2-card{
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+    .describe-card{
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+    #h1-contato{
+        font-size: 25px;
+        width: 272.5px;
+        margin-left: 10%;
+    }
+    #botao-contato{
+        font-size: 13px;
+    }
+    .lang-menu-mobile{
+        margin-left: 5px;
+    }
+}
+
+/*Celular 430px*/
+@media screen and (max-width: 431px){
+    .logo{
+        width: 280px;
+        height: 280px;
+        margin-left: -25%;
+        margin-right: -30%;
+        margin-top: -32%;
+    }
+    .foto{
+        width: 160px;
+        height: 160px;
+        margin-left: 30px;
+    }
+    .h1-main{
+        font-size: 25px;
+    }
+    .paragrafo-main{
+        font-size: 12px;
+        width: 60%;
+    }
+    .logo-github{
+        width: 40px;
+        height: 40px;
+    }
+    .logo-linkedin{
+        width: 40px;
+        height: 40px;
+    }
+    .logo-curriculo{
+        width: 40px;
+        height: 40px;
+    }
+    .redes-sociais{
+        font-size: 12px;
+    }
+    #projetos{
+        font-size: 22px;
+        margin-left: 36.5%;
+    }
+    .h2-card{
+        font-size: 11px;
+    }
+    .describe-card{
+        font-size: 9px;
+    }
+    #h1-contato{
+        font-size: 15px;
+        width: 165.5px;
+        margin-left: 10.5%;
+    }
+    .paragrafo-contato{
+        font-size: 13px;
+    }
+    #botao-contato{
+        width: 70px;
+        height: 30px;
+    }
+    #btn-menu{
+        width: 60px;
+        height: 60px;
+        border-radius: 15px;
+    }
+    .linha{
+        width: 40px;
+    }
+    
+    .lang-menu-mobile{
+        margin-left: 4px;
+        margin-top: -15px;
+    }
+    #botao-menu-mobile{
+        margin-left: 42%;
+    }
+}
+
+/*Celular 390px*/
+@media screen and (max-width: 394px){
+    .logo{
+        width: 280px;
+        height: 280px;
+        margin-left: -20%;
+        margin-right: -37%;
+    }
+    .foto{
+        width: 160px;
+        height: 160px;
+        margin-left: 30px;
+    }
+    .h1-main{
+        font-size: 22px;
+    }
+    .paragrafo-main{
+        font-size: 12px;
+        width: 60%;
+    }
+    .logo-github{
+        width: 40px;
+        height: 40px;
+    }
+    .logo-linkedin{
+        width: 40px;
+        height: 40px;
+    }
+    .logo-curriculo{
+        width: 40px;
+        height: 40px;
+    }
+    .redes-sociais{
+        font-size: 12px;
+    }
+    #projetos{
+        font-size: 22px;
+        margin-left: 36.5%;
+    }
+    .h2-card{
+        font-size: 10px;
+    }
+    .describe-card{
+        font-size: 8px;
+    }
+    #h1-contato{
+        font-size: 13px;
+        width: 144px;
+        margin-left: 12%;
+    }
+    .paragrafo-contato{
+        font-size: 12px;
+    }
+    #botao-contato{
+        width: 70px;
+        height: 30px;
+    }
+    .lang-menu-mobile{
+        margin-right: -8px;
+    }
+}
+
+/*Celular 360px*/
+@media screen and (max-width: 361px){
+    .logo{
+        width: 260px;
+        height: 260px;
+        margin-left: -15%;
+        margin-right: -40%;
+    }
+    .foto{
+        width: 160px;
+        height: 160px;
+        margin-left: 30px;
+    }
+    .h1-main{
+        font-size: 20px;
+    }
+    .paragrafo-main{
+        font-size: 12px;
+        width: 60%;
+    }
+    .logo-github{
+        width: 40px;
+        height: 40px;
+    }
+    .logo-linkedin{
+        width: 40px;
+        height: 40px;
+    }
+    .logo-curriculo{
+        width: 40px;
+        height: 40px;
+    }
+    .redes-sociais{
+        font-size: 12px;
+    }
+    #projetos{
+        font-size: 20px;
+        margin-left: 36.5%;
+    }
+    .h2-card{
+        font-size: 8px;
+    }
+    .describe-card{
+        font-size: 7px;
+    }
+    #h1-contato{
+        font-size: 12px;
+        width: 133px;
+        margin-left: 12%;
+    }
+    .paragrafo-contato{
+        font-size: 12px;
+    }
+    #botao-contato{
+        width: 70px;
+        height: 30px;
+    }
+    .lang-menu-mobile{
+        margin-left: -4px;
+        margin-top: -15px;
+    }
+    #botao-menu-mobile{
+        margin-left: 40%;
+    }
+}
